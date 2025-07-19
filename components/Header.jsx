@@ -7,13 +7,12 @@ const Header = () => {
       <div className="flex justify-between items-center">
         <Image 
           src={assets.logo} 
-          width={180} 
           alt=""
           priority
-          className="w-[100px] sm:w-[130px] lg:w-[150px] object-contain h-auto"
+          className="w-[140px] sm:w-[170px] object-contain h-auto"
         />
         <button
-          className="flex items-center gap-2 font-medium py-1 px-3 sm:py-3 sm:px-6 
+          className="flex items-center gap-2 font-medium px-3 py-1 sm:px-6 sm:py-3
           border border-solid border-black shadow-[-7px_7px_0px_#000000]"
         >
           Get Started
@@ -24,7 +23,7 @@ const Header = () => {
         <h1 className="text-3xl sm:text-5xl font-medium">
           Latest Blogs
         </h1>
-        <p className="mt-8 max-w-[740px] m-auto text-base sm:text-lg">
+        <p className="mt-2 max-w-[740px] m-auto text-base sm:text-lg">
           Take a moment. This might be the story you didn't know you needed today.
         </p>
         <form 
@@ -35,11 +34,11 @@ const Header = () => {
           <input 
             type="email" 
             placeholder="Enter your email"
-            className="pl-4 outline-none"
+            className="pl-4 text-lg outline-none w-full"
           />
           <button 
             type="submit"
-            className="border-1 border-black py-4 px-4 sm:px-8 active:bg-gray-700 active:text-white"
+            className="border-1 border-black p-4 sm:px-8 active:bg-gray-700 active:text-white"
           >
             Subscribe
           </button>
