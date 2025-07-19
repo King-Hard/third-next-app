@@ -1,0 +1,7 @@
+Assests notes
+1, first we create assets folder for storage to our images and icons
+2, second add us file name assets, this file we ganna user for temporary databse. 
+3, third open natin yung assests file na ginawa natin, then importing all images, and icons.
+4, fourth export const lang tayo with the name of assets equal lang natin sa brackket and curly braces, bakit nga ba tayo gumamit ng bracket kase dito natin ilalagay yung mga inimport natin na icons. Ang concept neto is may const assests tayo diba so bali sya yung magiging temporary folder natin na may mga lamang files na galing sa mga inimports natin earlier. So pano sya gagamitin example yung isang icon instead na ilagay natin sa src ng image natin is /images/logo.png, ang ilalagay nalag natin is yung folder na ginawa natin which is yung const assests so bali sa image src kunin lang natin yung folder na assests and then .file lang tayo kung anong file yung kukunin natin sa loob ng folder na ginawa natin. mas madali to although same result pero mas cleared, and organized yung way nato.
+Sa ang magiging form nya pag ginamit natin is <Image src={assets.logo}/> nakuha na natin yung image without importing the manual path ng bawat image or logo na gagamitin natin.
+5, fifth - 

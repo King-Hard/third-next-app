@@ -24,7 +24,7 @@ const Header = () => {
         <h1 className="text-3xl sm:text-5xl font-medium">
           Latest Blogs
         </h1>
-        <p className="mt-10 max-w-[740px] m-auto text-base sm:text-lg">
+        <p className="mt-8 max-w-[740px] m-auto text-base sm:text-lg">
           Take a moment. This might be the story you didn't know you needed today.
         </p>
         <form 
