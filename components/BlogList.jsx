@@ -8,7 +8,7 @@ const BlogList = () => {
   return (
     <div>
       <div>
-        
+        <h1>asdhaudsoa</h1>
       </div>
       <div className="flex justify-center gap-6 my-10">
         <button 
