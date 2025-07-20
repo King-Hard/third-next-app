@@ -9,6 +9,7 @@ const BlogList = () => {
     <div>
       <div>
         <h1>asdhaudsoa</h1>
+        <p>ansdandujsanudosan</p>
       </div>
       <div className="flex justify-center gap-6 my-10">
         <button 
