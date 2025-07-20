@@ -1,0 +1,1 @@
+1, first sa menu tayp, meron tayo ditong all, technology, startup, and lifestyle. bali ang mangyayari rito is pagpinindot natin yung technology example ang lilitaw lang na mga cards is yung may category na technology

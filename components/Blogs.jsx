@@ -1,6 +1,7 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 
+// this is a template card, sa isang natin component doon na natin lalagyan ng laman to using the set parameters natin. 
 const Blogs = ({title, description, category, image}) => {
   return (
     <div className="max-w-[330px] sm:max-w-[300px] bg-white border border-black hover:shadow-[-7px_7px_0px_#000000]">
