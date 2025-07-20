@@ -1,4 +1,4 @@
-import { assets, blog_data } from "@/assets/assets";
+import { assets } from "@/assets/assets";
 import Image from "next/image";
 
 const Blogs = ({title, description, category, image}) => {
@@ -6,7 +6,7 @@ const Blogs = ({title, description, category, image}) => {
     <div className="max-w-[330px] sm:max-w-[300px] bg-white border border-black hover:shadow-[-7px_7px_0px_#000000]">
       <Image 
         src={image}  
-        width={400} 
+        width={400}
         height={400}
         alt=""
         className="border-b border-black "
@@ -27,7 +27,6 @@ const Blogs = ({title, description, category, image}) => {
               src={assets.arrow}
               width={12}
               alt=""
-              className=""
             />
         </div>
       </div>
