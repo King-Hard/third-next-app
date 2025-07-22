@@ -6,7 +6,7 @@ const BlogList = () => {
   const [menu, setMenu] = useState("All")
 
   return (
-    <div>
+    <div className="mb-12 sm:mb-6">
       <div className="flex justify-center gap-6 my-10">
         <button 
           onClick={() => setMenu("All")} 
@@ -39,6 +39,7 @@ const BlogList = () => {
           .map((item, index) =>{
             return <Blogs
               key={index} 
+              id={item.id}
               image={item.image}
               category={item.category}
               title={item.title}
@@ -46,7 +47,6 @@ const BlogList = () => {
             />
         })}
       </div>
-      <div></div>
     </div>
   );
 };
