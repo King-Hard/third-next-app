@@ -44,7 +44,7 @@ const page = ({params}) => {
         <h1 className="text-2xl sm:text-5xl font-semibold max-w-[700px] mx-auto">
           {data.title}
         </h1>
-        <div></div>
+        <div><p></p></div>
         <Image
           src={data.author_img}
           alt=""
