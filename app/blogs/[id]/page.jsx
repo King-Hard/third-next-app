@@ -4,26 +4,23 @@ import { assets, blog_data } from "@/assets/assets";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState, use} from "react"
+import { useParams } from "next/navigation";
+import { useState, useEffect } from "react";
 
-const page = ({props}) => {
-  const params = use(props.params);
+const Page = () => {
+  const params = useParams();
   const [data, setData] = useState(null);
-  const  fetchBlogData = () => {
-    for(let i = 0; i < blog_data.length; i++) {
-      if(Number(params.id) === blog_data[i].id) {
-        setData(blog_data[i]);
-        break;
-      };
-    };
-  };
 
   useEffect(() => {
-    fetchBlogData();
-  }, []);
-
-  return (data ? 
-    (<>
+    if (params && params.id) {
+      const id = parseInt(params.id);
+      const foundData = blog_data.find((item) => item.id === id);
+      setData(foundData || null);
+    }
+  }, [params]);
+  
+  return (data ? (
+    <>
       <div className="bg-gray-200 py-5 px-5 md:px-12 lg:px-28">
         <div className="flex justify-between items-center">
           <Link href="/">
@@ -67,36 +64,32 @@ const page = ({props}) => {
           priority
           className="border-4 border-white "
         />
-        <h1 className="my-8 text-[26px] font-semibold">
-          Introduction:
-        </h1>
-        <p>
-          {data.description}
-        </p>
-
-        <h2 className="my-5 text-[18px] font-semibold">
-          Step 1: Self-Reflection and Goal Setting
-        </h2>
-        <p>
-          Before you can manage your lifestyle, you must have a clear understanding of what you want to achieve. Start by reflecting on your values, aspirations, and long-term goals. 
-        </p>
-
-        <h1 className="my-5 text-[18px] font-semibold">
-          Strp 2: Self-Reflection and Goal Setting
-        </h1>
-        <p>
-          Before you can manage your lifestyle, you must have a clear understanding of what you want to achieve. Start by reflecting on your values, aspirations, and long-term goals. 
-        </p>
-  
-        <h1 className="my-5 text-[18px] font-semibold">
-          Conclusion:
-        </h1>
-        <p>
-          Managing your lifestyle is a journey that requires commitment and self-awareness. By following this step-by-step guide, you can take control of your life and make meaningful changes that lead to a more balanced and fulfilling lifestyle. Remember that it's okay to seek support and guidance from professionals or mentors along the way. Your well-being and happiness are worth the effort.      
-        </p>
-
-        <div className="mt-18">
-          <p className="text-black text-lg font-semibold my-4">
+        <div className="my-5">
+          <h1 className="text-2xl sm:text-3xl font-medium">
+            Introduction:
+          </h1>
+          <p className="text-base sm:text-xl">{data.description}</p>
+        </div>
+        <div className="my-5">
+          <h1 className="text-lg font-medium">
+            {`Step 1: ${data.title_1}`}
+          </h1>
+          <p className="text-base sm:text-xl">{data.step_1}</p>
+        </div>
+        <div className="my-5">
+          <h1 className="text-lg font-medium">
+            {`Step 2: ${data.title_2}`}
+          </h1>
+          <p className="text-base sm:text-xl">{data.step_2}</p>
+        </div>
+        <div className="my-5">
+          <h1 className="text-2xl sm:text-3xl font-medium">
+            Conclusion:
+          </h1>
+          <p className="text-base sm:text-xl">{data.conclusion}</p>  
+        </div>
+        <div className="mt-12">
+          <p className="text-black text-xl font-medium my-4">
             Share this articel on social media:
           </p>
           <div className="flex">
@@ -119,8 +112,10 @@ const page = ({props}) => {
         </div>
       </div>
       <Footer/>
-  </>) : (<> </>)
+    </>) : (
+      <>Loading...</>
+    )
   );
 };
 
-export default page
+export default Page
