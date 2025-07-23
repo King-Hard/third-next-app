@@ -40,20 +40,3 @@ export async function POST(request) {
 
   return NextResponse.json({sucess : true, message: "Blog Added!"});
 };
-
-<div>
-  <div>
-    <h1>
-      <p>
-        HAHAHAHAHAHA
-        <div>
-          <h1>
-            <p>
-              HAHAHAHAHA
-            </p>
-          </h1>
-        </div>
-      </p>
-    </h1>
-  </div>
-</div>
