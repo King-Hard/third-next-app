@@ -122,13 +122,5 @@ const page = () => {
     </div>
   );
 };
-<div>
-  <div>
-    <p>
-      <h1>
-        ahksdbhkadbjksa
-      </h1>
-    </p>
-  </div>
-</div>
+
 export default page
