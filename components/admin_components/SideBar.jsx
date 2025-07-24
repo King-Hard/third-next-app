@@ -16,7 +16,7 @@ const SideBar = () => {
       <div className="w-45 sm:w-80 h-[100vh] relative py-12 border border-black">
         <div className="w-[90%] sm:w-[80%] absolute right-0">
           <Link 
-            className="mt-5 flex items-center border border-black gap-3 font-medium px-3 py-2 bg-white shadow-[-5px_5px_0px_#000000]"
+            className="mt-1 flex items-center border border-black gap-3 font-medium px-3 py-2 bg-white shadow-[-5px_5px_0px_#000000]"
             href="/admin/addBlog"
           >
             <Image
@@ -54,4 +54,4 @@ const SideBar = () => {
   );
 };
 
-export default SideBar
+export default SideBar  
